@@ -13,6 +13,13 @@ public class MapTest {
 		map1.put(3, "maro");
 		
 		map1.forEach((key, name) -> System.out.println(key + " " + name));
+		map1.merge(4, "John", ( key, name) -> "John"); 
+		System.out.println("----Adding one more person using new Merge functionality-----");
+		map1.forEach((key, name) -> System.out.println(key + " " + name));
+		
+		map1.merge(4, "John", ( key, name) -> "John"); 
+		System.out.println("----Testing already existing entry using new Merge functionality-----");
+		map1.forEach((key, name) -> System.out.println(key + " " + name));
 	}
 	
 }
